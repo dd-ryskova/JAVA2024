@@ -1,0 +1,40 @@
+-- Table: public.Project
+
+-- DROP TABLE IF EXISTS public."Project";
+
+CREATE TABLE IF NOT EXISTS public."Project"
+(
+    id uuid NOT NULL,
+    "name" text COLLATE pg_catalog."default" NOT NULL,
+    "description" text COLLATE pg_catalog."default",
+    "startDate" text COLLATE pg_catalog."default" NOT NULL,
+    "endDate" text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Project_pkey" PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Project"
+    OWNER to postgres;
+-- Table: public.Task
+
+-- DROP TABLE IF EXISTS public."Task";
+
+CREATE TABLE IF NOT EXISTS public."Task"
+(
+    id uuid NOT NULL,
+    title text COLLATE pg_catalog."default" NOT NULL,
+    description text COLLATE pg_catalog."default",
+    status text COLLATE pg_catalog."default" NOT NULL DEFAULT 'New'::text,
+    "projectId" uuid NOT NULL,
+    CONSTRAINT "Task_pkey" PRIMARY KEY (id),
+    CONSTRAINT "projectId" FOREIGN KEY ("projectId")
+        REFERENCES public."Project" (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Task"
+    OWNER to postgres;
