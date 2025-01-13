@@ -32,7 +32,8 @@ The PostgreSQL database was selected for use.
 ![PostgreSQL](images/2.1.png)
 
 <h2>Task 3</h2>
-- Choose any subject area and make a model with at least two entities with a few properties. <br>
+
+- Choose any subject area and make a model with at least two entities with a few properties. 
 
 The subject area "Project Management" was selected. There are two entities in this area: a Project and a Task. Each project can contain
 multiple tasks.
