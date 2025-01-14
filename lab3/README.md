@@ -30,9 +30,9 @@ Develop a REST API for accessing your data.
   It should allow usage of both XML and JSON.
 
 
-1. XML: [WebController](src\main\java\com\example\lab3\controllers\WebController.java)
-2. JSON Project: [ProjectController](src\main\java\com\example\lab3\controllers\ProjectController.java)
-3. JSON Task: [TaskController](src\main\java\com\example\lab3\controllers\TaskController.java)
+1. XML: [WebController](src/main/java/com/example/lab3/controllers/WebController.java)
+2. JSON Project: [ProjectController](src/main/java/com/example/lab3/controllers/ProjectController.java)
+3. JSON Task: [TaskController](src/main/java/com/example/lab3/controllers/TaskController.java)
 
 <h2>Task 4</h2>
 
