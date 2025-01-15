@@ -1,0 +1,17 @@
+
+-- Table: public.mailing_rules
+
+-- DROP TABLE IF EXISTS public.mailing_rules;
+
+CREATE TABLE IF NOT EXISTS public.mailing_rules
+(
+    id uuid NOT NULL,
+    email character varying(255) COLLATE pg_catalog."default",
+    tablename character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT mailing_rules_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.mailing_rules
+    OWNER to postgres;
