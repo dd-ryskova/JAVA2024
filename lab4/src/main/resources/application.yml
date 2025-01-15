@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: test
+  jackson:
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 1
+      auto-commit: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.default_schema: public
+  artemis:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: secret
+  mail:
+    host: smtp.yandex.ru  # Изменено на SMTP-сервер Яндекса
+    port: 587  # Порт для SSL (или 587 для STARTTLS)
+    username: murmuraaaa@yandex.ru  # Ваш email на Яндексе
+    password: iyztfliwjmymlmhe  # Ваш пароль от почты Яндекса
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            #enable: true  # Включить SSL, если используете порт 465
+            trust: "*"
+  jms:
+    pub-sub-domain: true
+application:
+  topic:
+    audit: audit_queue
