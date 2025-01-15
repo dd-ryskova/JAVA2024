@@ -17,7 +17,9 @@ You can choose any IDE, but IntelliJ IDEA is recommended.
 - Add new table to your database. Each row should represent a change of information in other tables of your database. 
 A row should contain information on a kind of a change (insert, update, etc.), on a changing entity (e.g. its class, id) and on a substance of a change (e.g. new values for fields).
 
+
 [Audit.db](lab4/src/Audit.db)
+
 
 <h2>Task 2</h2>
 
@@ -47,7 +49,10 @@ Specify additional information required to identify such an event (e.g. entity i
 
 - Add new table to the database. Each row should contain an e-mail for notification and condition information.
 [AuditEvent](lab4/src/main/java/com/example/lab4/models/AuditEvent.java)
+
+
 [Mail.db](lab4/src/Mail.db)
+
 
 <h2>Task 6</h2>
 
